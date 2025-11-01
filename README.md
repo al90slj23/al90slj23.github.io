@@ -2,98 +2,98 @@
 
 一个现代、优雅的个人主页，具有呼吸感设计和流畅的动画效果。
 
-## Features
+## 特性
 
-- **Modern Design**: Clean, minimalist interface with elegant typography
-- **Breathing Space**: Generous whitespace and thoughtful spacing throughout
-- **Smooth Animations**: Subtle fade-in effects and smooth scrolling
-- **Responsive Layout**: Optimized for desktop, tablet, and mobile devices
-- **Interactive Elements**: Hover effects, parallax backgrounds, and smooth transitions
-- **Accessible**: Keyboard navigation support and reduced motion preferences
-- **Performance Optimized**: Lightweight and fast-loading
+- **现代设计**：简洁的极简界面，优雅的排版
+- **呼吸感空间**：慷慨的留白和精心设计的间距
+- **流畅动画**：微妙的淡入效果和平滑滚动
+- **响应式布局**：针对桌面、平板和移动设备优化
+- **交互元素**：悬停效果、视差背景和流畅过渡
+- **无障碍访问**：支持键盘导航和减弱动效偏好
+- **性能优化**：轻量级且快速加载
 
-## Sections
+## 页面结构
 
-- **Hero**: Eye-catching introduction with animated gradient text
-- **About**: Personal introduction with skills and technologies
-- **Projects**: Showcase of featured work with project cards
-- **Contact**: Easy ways to get in touch
+- **首页横幅**：引人注目的介绍，带有动画渐变文字
+- **关于我**：个人介绍，展示技能和技术栈
+- **项目展示**：精选作品的项目卡片展示
+- **联系方式**：便捷的联系方式
 
-## Customization
+## 自定义指南
 
-### Update Personal Information
+### 更新个人信息
 
-1. **Navigation & Hero** ([index.html:17-51](index.html#L17-L51))
-   - Change the logo text in the navigation
-   - Update the hero title and description
-   - Modify the availability badge status
+1. **导航栏和首页横幅** ([index.html:17-51](index.html#L17-L51))
+   - 修改导航栏 Logo 文字
+   - 更新首页标题和描述
+   - 调整可用性徽章状态
 
-2. **About Section** ([index.html:69-102](index.html#L69-L102))
-   - Update the personal bio text
-   - Add or remove skill tags
-   - Modify technology categories
+2. **关于区域** ([index.html:69-102](index.html#L69-L102))
+   - 更新个人简介文字
+   - 添加或删除技能标签
+   - 修改技术分类
 
-3. **Projects** ([index.html:111-203](index.html#L111-L203))
-   - Replace project placeholders with real projects
-   - Update project titles, descriptions, and tags
-   - Add project links (GitHub, live demos, etc.)
+3. **项目展示** ([index.html:111-203](index.html#L111-L203))
+   - 用真实项目替换占位符
+   - 更新项目标题、描述和标签
+   - 添加项目链接（GitHub、在线演示等）
 
-4. **Contact Information** ([index.html:217-252](index.html#L217-L252))
-   - Update email address
-   - Add social media links (GitHub, Twitter, LinkedIn)
-   - Customize contact methods
+4. **联系信息** ([index.html:217-252](index.html#L217-L252))
+   - 更新邮箱地址
+   - 添加社交媒体链接（GitHub、Twitter、LinkedIn）
+   - 自定义联系方式
 
-### Color Scheme
+### 配色方案
 
-Edit CSS variables in [styles.css:21-32](styles.css#L21-L32):
+编辑 [styles.css:21-32](styles.css#L21-L32) 中的 CSS 变量：
 
 ```css
 :root {
-    --color-accent: #667eea;        /* Primary accent color */
-    --color-accent-hover: #5568d3;  /* Hover state */
+    --color-accent: #667eea;        /* 主要强调色 */
+    --color-accent-hover: #5568d3;  /* 悬停状态 */
     --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    /* ... customize other colors ... */
+    /* ... 自定义其他颜色 ... */
 }
 ```
 
-### Typography
+### 字体设置
 
-Change fonts in [styles.css:42-43](styles.css#L42-L43):
+在 [styles.css:42-43](styles.css#L42-L43) 中修改字体：
 
 ```css
 --font-primary: 'Inter', sans-serif;
 --font-display: 'Playfair Display', serif;
 ```
 
-Update Google Fonts in [index.html:8-10](index.html#L8-L10).
+在 [index.html:8-10](index.html#L8-L10) 中更新 Google Fonts。
 
-## Local Development
+## 本地开发
 
-1. Clone the repository:
+1. 克隆仓库：
 ```bash
 git clone https://github.com/al90slj23/al90slj23.github.io.git
 cd al90slj23.github.io
 ```
 
-2. Open `index.html` in your browser or use a local server:
+2. 在浏览器中打开 `index.html` 或使用本地服务器：
 ```bash
 # Python 3
 python -m http.server 8000
 
-# Node.js (if you have http-server installed)
+# Node.js（如果已安装 http-server）
 npx http-server
 
-# Or just open the file
+# 或直接打开文件
 open index.html
 ```
 
-3. Visit `http://localhost:8000` in your browser
+3. 在浏览器中访问 `http://localhost:8000`
 
-## Deployment to GitHub Pages
+## 部署到 GitHub Pages
 
-1. Create a repository named `username.github.io` (replace `username` with your GitHub username)
+1. 创建名为 `username.github.io` 的仓库（将 `username` 替换为你的 GitHub 用户名）
 
-2. Push your code:
+2. 推送代码：
 ```bash
 git add .
 git commit -m "Initial commit: personal portfolio"
@@ -102,32 +102,32 @@ git remote add origin https://github.com/username/username.github.io.git
 git push -u origin main
 ```
 
-3. Your site will be live at `https://username.github.io`
+3. 你的网站将在 `https://username.github.io` 上线
 
-## Browser Support
+## 浏览器支持
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- Chrome（最新版）
+- Firefox（最新版）
+- Safari（最新版）
+- Edge（最新版）
 
-## Technologies Used
+## 使用技术
 
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with custom properties, flexbox, grid
-- **JavaScript (ES6+)**: Interactive features and animations
-- **Google Fonts**: Inter and Playfair Display
+- **HTML5**：语义化标记
+- **CSS3**：现代样式，使用自定义属性、Flexbox、Grid
+- **JavaScript (ES6+)**：交互功能和动画
+- **Google Fonts**：Inter 和 Playfair Display
 
-## Performance
+## 性能优化
 
-- Optimized animations with `requestAnimationFrame`
-- Debounced scroll and resize events
-- Lazy loading of animations via Intersection Observer
-- Reduced motion support for accessibility
+- 使用 `requestAnimationFrame` 优化动画
+- 防抖处理滚动和调整大小事件
+- 通过 Intersection Observer 延迟加载动画
+- 支持减弱动效以提高无障碍性
 
-## License
+## 许可证
 
-MIT License - feel free to use this template for your own portfolio!
+MIT License - 欢迎使用此模板创建你自己的作品集！
 
 ## 开发者
 
@@ -135,4 +135,4 @@ MIT License - feel free to use this template for your own portfolio!
 
 ---
 
-**Note**: Remember to customize all placeholder content with your own information before deploying!
+**提示**：部署前请记得将所有占位符内容替换为你自己的信息！
