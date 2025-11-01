@@ -18,7 +18,8 @@
 }
 
 /* 自定义光标元素样式优化 */
-.custom-cursor {
+.custom-cursor,
+.cursor-ripple {
     pointer-events: none;
     user-select: none;
     will-change: transform;
@@ -32,7 +33,8 @@
 
 /* 确保在触摸设备上不显示自定义光标 */
 @media (max-width: 768px), (hover: none) {
-    .custom-cursor {
+    .custom-cursor,
+    .cursor-ripple {
         display: none !important;
     }
 }
