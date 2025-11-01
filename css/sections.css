@@ -87,7 +87,7 @@ section {
     border-radius: var(--radius-lg);
     font-size: var(--font-size-sm);
     font-weight: 500;
-    color: var(--color-text);
+    color: #1a202c;
     transition: all var(--transition-bounce);
     position: relative;
     overflow: hidden;
@@ -149,6 +149,7 @@ section {
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-bounce);
+    color: #1a202c;
 }
 
 .contact-method:hover {
@@ -192,7 +193,7 @@ section {
 .contact-value {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--color-text);
+    color: #1a202c;
 }
 
 @media (max-width: 768px) {

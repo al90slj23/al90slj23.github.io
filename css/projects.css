@@ -17,6 +17,8 @@
     transition: all var(--transition-bounce);
     display: flex;
     flex-direction: column;
+    /* 确保卡片内容在任何模式下都清晰可读 */
+    color: #1a202c;
 }
 
 .project-card:hover {
@@ -54,12 +56,12 @@
     font-size: var(--font-size-xl);
     font-weight: 700;
     margin-bottom: var(--spacing-sm);
-    color: var(--color-text);
+    color: #1a202c;
 }
 
 .project-description {
     font-size: var(--font-size-base);
-    color: var(--color-text-light);
+    color: #4a5568;
     line-height: var(--line-height-relaxed);
     margin-bottom: var(--spacing-md);
     flex: 1;
