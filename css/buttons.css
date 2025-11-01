@@ -53,17 +53,17 @@
 }
 
 .btn-secondary {
-    background: white;
-    color: var(--color-text);
-    border: 2px solid var(--color-text-lighter);
-    box-shadow: var(--shadow-sm);
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a202c;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    box-shadow: var(--shadow-md);
 }
 
 .btn-secondary:hover {
-    background: var(--color-background-alt);
+    background: white;
     border-color: var(--color-accent);
     transform: translateY(-4px) scale(1.02);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-xl);
 }
 
 .btn-secondary:active {

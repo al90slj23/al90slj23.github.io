@@ -18,23 +18,10 @@
 }
 
 /* 自定义光标元素样式优化 */
-.custom-cursor,
-.custom-cursor-dot {
+.custom-cursor {
     pointer-events: none;
     user-select: none;
-    will-change: transform, width, height;
-}
-
-/* 点击效果 */
-body:active .custom-cursor {
-    width: 40px !important;
-    height: 40px !important;
-    border-color: rgba(102, 126, 234, 0.8) !important;
-}
-
-body:active .custom-cursor-dot {
-    width: 4px !important;
-    height: 4px !important;
+    will-change: transform;
 }
 
 /* 文本选择时的光标效果 */
@@ -45,8 +32,7 @@ body:active .custom-cursor-dot {
 
 /* 确保在触摸设备上不显示自定义光标 */
 @media (max-width: 768px), (hover: none) {
-    .custom-cursor,
-    .custom-cursor-dot {
+    .custom-cursor {
         display: none !important;
     }
 }
