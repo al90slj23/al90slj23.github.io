@@ -1,0 +1,52 @@
+/**
+ * Custom Cursor Styles
+ * 自定义光标样式
+ */
+
+/* 隐藏默认光标，使用自定义光标 */
+@media (min-width: 769px) and (hover: hover) {
+    body,
+    a,
+    button,
+    .btn,
+    .project-card,
+    .nav-link,
+    .skill-tag,
+    .contact-method {
+        cursor: none !important;
+    }
+}
+
+/* 自定义光标元素样式优化 */
+.custom-cursor,
+.custom-cursor-dot {
+    pointer-events: none;
+    user-select: none;
+    will-change: transform, width, height;
+}
+
+/* 点击效果 */
+body:active .custom-cursor {
+    width: 40px !important;
+    height: 40px !important;
+    border-color: rgba(102, 126, 234, 0.8) !important;
+}
+
+body:active .custom-cursor-dot {
+    width: 4px !important;
+    height: 4px !important;
+}
+
+/* 文本选择时的光标效果 */
+::selection {
+    background-color: var(--color-accent-light);
+    color: var(--color-accent);
+}
+
+/* 确保在触摸设备上不显示自定义光标 */
+@media (max-width: 768px), (hover: none) {
+    .custom-cursor,
+    .custom-cursor-dot {
+        display: none !important;
+    }
+}

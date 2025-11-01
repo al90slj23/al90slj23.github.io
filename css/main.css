@@ -9,6 +9,9 @@
 /* 基础样式 */
 @import 'base.css';
 
+/* 交互增强 */
+@import 'cursor.css';
+
 /* 布局组件 */
 @import 'background.css';
 @import 'navigation.css';

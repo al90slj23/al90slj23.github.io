@@ -172,69 +172,94 @@
     // Note: Footer content is now managed by config-loader.js
 
     // ===================================
-    // Cursor Follow Effect (Optional Enhancement)
+    // Enhanced Cursor Effect
     // ===================================
 
     let cursor = null;
+    let cursorDot = null;
 
     // Only add cursor effect on desktop devices
     if (window.innerWidth > 768 && !('ontouchstart' in window)) {
+        // 创建光标圆环（外圈）
         cursor = document.createElement('div');
         cursor.className = 'custom-cursor';
         cursor.style.cssText = `
             position: fixed;
-            width: 20px;
-            height: 20px;
-            border: 2px solid var(--color-accent);
+            width: 32px;
+            height: 32px;
+            border: 2px solid rgba(102, 126, 234, 0.3);
             border-radius: 50%;
             pointer-events: none;
             z-index: 9999;
-            transition: transform 0.2s ease-out, opacity 0.3s ease;
-            opacity: 0;
-            mix-blend-mode: difference;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+            opacity: 1;
         `;
         document.body.appendChild(cursor);
 
-        let mouseX = 0;
-        let mouseY = 0;
-        let cursorX = 0;
-        let cursorY = 0;
+        // 创建光标中心点（内圈）
+        cursorDot = document.createElement('div');
+        cursorDot.className = 'custom-cursor-dot';
+        cursorDot.style.cssText = `
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+            opacity: 0.8;
+        `;
+        document.body.appendChild(cursorDot);
 
+        // 直接跟随，无延迟
         document.addEventListener('mousemove', function(e) {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
+            // 光标中心点立即跟随
+            cursorDot.style.left = e.clientX + 'px';
+            cursorDot.style.top = e.clientY + 'px';
+
+            // 外圈也立即跟随
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.addEventListener('mouseenter', function() {
             cursor.style.opacity = '1';
+            cursorDot.style.opacity = '0.8';
         });
 
         document.addEventListener('mouseleave', function() {
             cursor.style.opacity = '0';
+            cursorDot.style.opacity = '0';
         });
 
-        // Smooth cursor animation
-        function animateCursor() {
-            const dx = mouseX - cursorX;
-            const dy = mouseY - cursorY;
-
-            cursorX += dx * 0.1;
-            cursorY += dy * 0.1;
-
-            cursor.style.left = cursorX + 'px';
-            cursor.style.top = cursorY + 'px';
-
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-
-        // Scale cursor on interactive elements
+        // 在可交互元素上的效果 - 更优雅
         const interactiveElements = document.querySelectorAll('a, button, .btn, .project-card');
 
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', function() {
-                cursor.style.transform = 'scale(1.5)';
+                // 外圈变大，颜色变深
+                cursor.style.width = '48px';
+                cursor.style.height = '48px';
+                cursor.style.borderColor = 'rgba(102, 126, 234, 0.6)';
+
+                // 中心点变大
+                cursorDot.style.width = '8px';
+                cursorDot.style.height = '8px';
+                cursorDot.style.opacity = '1';
             });
 
             el.addEventListener('mouseleave', function() {
-                cursor.style.transform = 'scale(1)';
+                // 恢复默认大小
+                cursor.style.width = '32px';
+                cursor.style.height = '32px';
+                cursor.style.borderColor = 'rgba(102, 126, 234, 0.3)';
+
+                cursorDot.style.width = '6px';
+                cursorDot.style.height = '6px';
+                cursorDot.style.opacity = '0.8';
             });
         });
     }
@@ -285,6 +310,10 @@
         if (cursor && window.innerWidth <= 768) {
             cursor.remove();
             cursor = null;
+        }
+        if (cursorDot && window.innerWidth <= 768) {
+            cursorDot.remove();
+            cursorDot = null;
         }
     }, 250);
 
