@@ -1,6 +1,6 @@
-# Personal Portfolio Website
+# 李算老几 - 个人主页
 
-A modern, elegant personal portfolio website with breathing space aesthetic and smooth animations.
+一个现代、优雅的个人主页，具有呼吸感设计和流畅的动画效果。
 
 ## Features
 
@@ -129,9 +129,9 @@ git push -u origin main
 
 MIT License - feel free to use this template for your own portfolio!
 
-## Credits
+## 开发者
 
-Designed and developed by al90slj23
+设计与开发：李算老几
 
 ---
 

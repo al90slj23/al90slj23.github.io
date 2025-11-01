@@ -173,7 +173,7 @@
     const footerText = document.querySelector('.footer-content p');
     if (footerText) {
         const currentYear = new Date().getFullYear();
-        footerText.textContent = `© ${currentYear} al90slj23. Crafted with care.`;
+        footerText.textContent = `© ${currentYear} 李算老几. 用心打造`;
     }
 
     // ===================================
@@ -299,8 +299,8 @@
     // Console Easter Egg
     // ===================================
 
-    console.log('%c👋 Hey there!', 'font-size: 20px; font-weight: bold; color: #667eea;');
-    console.log('%cLooking at the code? I like your style!', 'font-size: 14px; color: #6b7280;');
-    console.log('%cFeel free to reach out if you want to collaborate.', 'font-size: 14px; color: #6b7280;');
+    console.log('%c👋 你好！', 'font-size: 20px; font-weight: bold; color: #667eea;');
+    console.log('%c在看代码？我喜欢你的风格！', 'font-size: 14px; color: #6b7280;');
+    console.log('%c如果你想合作，欢迎随时联系我。', 'font-size: 14px; color: #6b7280;');
 
 })();
