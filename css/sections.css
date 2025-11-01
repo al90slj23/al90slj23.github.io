@@ -1,0 +1,210 @@
+/**
+ * Sections
+ * 通用区域样式
+ */
+
+section {
+    padding: var(--spacing-2xl) 0;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-label {
+    display: inline-block;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-sm);
+}
+
+.section-title {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+/* About Section */
+.about {
+    background: var(--color-background-alt);
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text {
+    margin-bottom: var(--spacing-lg);
+}
+
+.lead {
+    font-size: var(--font-size-xl);
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: var(--spacing-md);
+    line-height: var(--line-height-relaxed);
+}
+
+.about-text p {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Skills */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.skill-category h3 {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.skill-tag {
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border: 2px solid var(--color-background-alt);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text);
+    transition: all var(--transition-bounce);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-tag::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: width var(--transition-base);
+    z-index: 0;
+}
+
+.skill-tag:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: var(--shadow-lg);
+    border-color: transparent;
+    color: white;
+}
+
+.skill-tag:hover::before {
+    width: 100%;
+}
+
+/* Contact Section */
+.contact {
+    background: var(--color-background-alt);
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-description {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-light);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-methods {
+    display: grid;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-bounce);
+}
+
+.contact-method:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+.contact-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gradient-primary);
+    border-radius: var(--radius-lg);
+    color: white;
+    flex-shrink: 0;
+    transition: all var(--transition-bounce);
+}
+
+.contact-method:hover .contact-icon {
+    transform: rotate(8deg) scale(1.1);
+    box-shadow: var(--shadow-glow);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.contact-label {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-lighter);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contact-value {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+}

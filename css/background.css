@@ -1,0 +1,47 @@
+/**
+ * Background Elements
+ * 背景装饰元素
+ */
+
+.background-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: var(--z-background);
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.03;
+    filter: blur(60px);
+}
+
+.shape-1 {
+    width: 600px;
+    height: 600px;
+    background: var(--gradient-primary);
+    top: -200px;
+    right: -100px;
+}
+
+.shape-2 {
+    width: 500px;
+    height: 500px;
+    background: var(--gradient-secondary);
+    bottom: -150px;
+    left: -100px;
+}
+
+.shape-3 {
+    width: 400px;
+    height: 400px;
+    background: var(--gradient-tertiary);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

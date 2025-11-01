@@ -1,0 +1,117 @@
+/**
+ * Projects Section
+ * 项目展示样式
+ */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.project-card {
+    background: white;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-bounce);
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: var(--shadow-xl), 0 0 60px rgba(102, 126, 234, 0.12);
+}
+
+.project-image {
+    width: 100%;
+    height: 240px;
+    background: var(--color-background-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-placeholder {
+    transition: all var(--transition-bounce);
+}
+
+.project-card:hover .project-placeholder {
+    transform: scale(1.15) rotate(3deg);
+}
+
+.project-content {
+    padding: var(--spacing-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text);
+}
+
+.project-description {
+    font-size: var(--font-size-base);
+    color: var(--color-text-light);
+    line-height: var(--line-height-relaxed);
+    margin-bottom: var(--spacing-md);
+    flex: 1;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.project-tag {
+    padding: 0.5rem 1rem;
+    background: var(--color-accent-light);
+    color: var(--color-accent);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    transition: all var(--transition-base);
+}
+
+.project-card:hover .project-tag {
+    background: var(--color-accent);
+    color: white;
+    transform: scale(1.05);
+}
+
+.project-links {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--color-accent);
+    transition: all var(--transition-base);
+}
+
+.project-link:hover {
+    color: var(--color-accent-hover);
+    transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 200px;
+    }
+}

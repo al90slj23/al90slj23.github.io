@@ -1,0 +1,19 @@
+/**
+ * Main CSS File
+ * 主样式文件 - 导入所有模块
+ */
+
+/* 设计变量 */
+@import 'variables.css';
+
+/* 基础样式 */
+@import 'base.css';
+
+/* 布局组件 */
+@import 'background.css';
+@import 'navigation.css';
+@import 'hero.css';
+@import 'buttons.css';
+@import 'sections.css';
+@import 'projects.css';
+@import 'footer.css';

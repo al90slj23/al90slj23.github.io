@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>李算老几 - 个人主页</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <script src="config.js"></script>
 </head>
 <body>
     <!-- Background Elements -->
@@ -20,8 +21,8 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <a href="#" class="logo">李算老几</a>
-            <div class="nav-links">
+            <a href="#" class="logo" data-config="nav.logo">李算老几</a>
+            <div class="nav-links" data-config="nav.links">
                 <a href="#about" class="nav-link">关于</a>
                 <a href="#projects" class="nav-link">项目</a>
                 <a href="#contact" class="nav-link">联系</a>
@@ -34,23 +35,23 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                <span>开放合作机会</span>
+                <span data-config="hero.badge">开放合作机会</span>
             </div>
             <h1 class="hero-title">
-                <span class="title-line">创造</span>
-                <span class="title-line gradient-text">有价值的数字体验</span>
-                <span class="title-line">让每一行代码都有意义</span>
+                <span class="title-line" data-config="hero.title.line1">创造</span>
+                <span class="title-line gradient-text" data-config="hero.title.line2">有价值的数字体验</span>
+                <span class="title-line" data-config="hero.title.line3">让每一行代码都有意义</span>
             </h1>
-            <p class="hero-description">
+            <p class="hero-description" data-config="hero.description">
                 一位充满热情的开发者，通过简洁的代码和深思熟虑的设计，打造优雅的解决方案。
             </p>
             <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">查看作品</a>
-                <a href="#contact" class="btn btn-secondary">联系我</a>
+                <a href="#projects" class="btn btn-primary" data-config="hero.cta.primary">查看作品</a>
+                <a href="#contact" class="btn btn-secondary" data-config="hero.cta.secondary">联系我</a>
             </div>
         </div>
         <div class="scroll-indicator">
-            <span class="scroll-text">向下滚动探索</span>
+            <span class="scroll-text" data-config="hero.scrollIndicator">向下滚动探索</span>
             <div class="scroll-line"></div>
         </div>
     </section>
@@ -59,22 +60,22 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">关于我</span>
-                <h2 class="section-title">个人介绍</h2>
+                <span class="section-label" data-config="about.label">关于我</span>
+                <h2 class="section-title" data-config="about.title">个人介绍</h2>
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="lead">
+                    <p class="lead" data-config="about.lead">
                         我是一名开发者，相信技术的力量能将想法转化为现实。
                     </p>
-                    <p>
+                    <p data-config="about.description">
                         专注于现代 Web 技术和以用户为中心的设计，我创造的数字体验不仅功能完善，而且使用愉悦。
                         每个项目都是突破边界、学习新知的机会。
                     </p>
                     <div class="skills">
                         <div class="skill-category">
-                            <h3>技术栈</h3>
-                            <div class="skill-tags">
+                            <h3 data-config="about.skills.tech.title">技术栈</h3>
+                            <div class="skill-tags" data-config="about.skills.tech.items">
                                 <span class="skill-tag">JavaScript</span>
                                 <span class="skill-tag">TypeScript</span>
                                 <span class="skill-tag">React</span>
@@ -83,8 +84,8 @@
                             </div>
                         </div>
                         <div class="skill-category">
-                            <h3>工具与平台</h3>
-                            <div class="skill-tags">
+                            <h3 data-config="about.skills.tools.title">工具与平台</h3>
+                            <div class="skill-tags" data-config="about.skills.tools.items">
                                 <span class="skill-tag">Git</span>
                                 <span class="skill-tag">Docker</span>
                                 <span class="skill-tag">AWS</span>
@@ -101,10 +102,10 @@
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">我的作品</span>
-                <h2 class="section-title">精选项目</h2>
+                <span class="section-label" data-config="projects.label">我的作品</span>
+                <h2 class="section-title" data-config="projects.title">精选项目</h2>
             </div>
-            <div class="projects-grid">
+            <div class="projects-grid" data-config="projects.items">
                 <article class="project-card">
                     <div class="project-image">
                         <div class="project-placeholder">
@@ -206,13 +207,13 @@
         <div class="container">
             <div class="contact-content">
                 <div class="section-header">
-                    <span class="section-label">联系方式</span>
-                    <h2 class="section-title">让我们一起合作</h2>
+                    <span class="section-label" data-config="contact.label">联系方式</span>
+                    <h2 class="section-title" data-config="contact.title">让我们一起合作</h2>
                 </div>
-                <p class="contact-description">
+                <p class="contact-description" data-config="contact.description">
                     我随时欢迎讨论新项目、创意想法，或成为您愿景的一部分。
                 </p>
-                <div class="contact-methods">
+                <div class="contact-methods" data-config="contact.methods">
                     <a href="mailto:al90slj23@gmail.com" class="contact-method">
                         <div class="contact-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -255,6 +256,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/config-loader.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

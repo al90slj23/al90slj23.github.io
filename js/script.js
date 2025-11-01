@@ -169,12 +169,7 @@
     // ===================================
     // Dynamic Year in Footer
     // ===================================
-
-    const footerText = document.querySelector('.footer-content p');
-    if (footerText) {
-        const currentYear = new Date().getFullYear();
-        footerText.textContent = `© ${currentYear} 李算老几. 用心打造`;
-    }
+    // Note: Footer content is now managed by config-loader.js
 
     // ===================================
     // Cursor Follow Effect (Optional Enhancement)
@@ -298,7 +293,7 @@
     // ===================================
     // Console Easter Egg
     // ===================================
-
+    // Note: Can be customized via config in the future
     console.log('%c👋 你好！', 'font-size: 20px; font-weight: bold; color: #667eea;');
     console.log('%c在看代码？我喜欢你的风格！', 'font-size: 14px; color: #6b7280;');
     console.log('%c如果你想合作，欢迎随时联系我。', 'font-size: 14px; color: #6b7280;');

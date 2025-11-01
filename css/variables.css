@@ -1,0 +1,91 @@
+/**
+ * CSS Variables - Design Tokens
+ * 全局设计变量
+ */
+
+:root {
+    /* Colors */
+    --color-text: #1a202c;
+    --color-text-light: #4a5568;
+    --color-text-lighter: #718096;
+    --color-background: #ffffff;
+    --color-background-alt: #f7fafc;
+    --color-accent: #667eea;
+    --color-accent-hover: #5568d3;
+    --color-accent-light: rgba(102, 126, 234, 0.1);
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-text: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+    /* Spacing - 增加呼吸感 */
+    --spacing-xs: 0.75rem;
+    --spacing-sm: 1.5rem;
+    --spacing-md: 3rem;
+    --spacing-lg: 6rem;
+    --spacing-xl: 9rem;
+    --spacing-2xl: 12rem;
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    --font-display: 'Playfair Display', 'PingFang SC', 'Microsoft YaHei', serif;
+
+    --font-size-xs: 0.875rem;
+    --font-size-sm: 1rem;
+    --font-size-base: 1.125rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3xl: 2.5rem;
+    --font-size-4xl: 3.5rem;
+    --font-size-5xl: 4.5rem;
+
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.6;
+    --line-height-relaxed: 1.8;
+
+    /* Shadows - 更柔和优雅 */
+    --shadow-sm: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 8px 16px -4px rgba(0, 0, 0, 0.08), 0 4px 8px -2px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 12px 24px -8px rgba(0, 0, 0, 0.1), 0 6px 12px -4px rgba(0, 0, 0, 0.06);
+    --shadow-xl: 0 24px 48px -12px rgba(0, 0, 0, 0.12), 0 12px 24px -6px rgba(0, 0, 0, 0.08);
+    --shadow-2xl: 0 32px 64px -16px rgba(0, 0, 0, 0.14), 0 16px 32px -8px rgba(0, 0, 0, 0.1);
+    --shadow-glow: 0 0 40px rgba(102, 126, 234, 0.15);
+
+    /* Border Radius */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+    --radius-full: 9999px;
+
+    /* Transitions */
+    --transition-fast: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Z-index */
+    --z-background: -1;
+    --z-base: 0;
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal: 400;
+    --z-popover: 500;
+    --z-tooltip: 600;
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #f7fafc;
+        --color-text-light: #e2e8f0;
+        --color-text-lighter: #cbd5e0;
+        --color-background: #1a202c;
+        --color-background-alt: #2d3748;
+    }
+}
