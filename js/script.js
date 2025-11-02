@@ -180,19 +180,58 @@
 
     // Only add cursor effect on desktop devices
     if (window.innerWidth > 768 && !('ontouchstart' in window)) {
-        // 创建手指光标 - 使用真实的 emoji
+        // 创建胖乎乎的手指光标 - 精心设计的可爱手型
         cursor = document.createElement('div');
         cursor.className = 'custom-cursor';
-        cursor.textContent = '👆';
+        cursor.innerHTML = `
+            <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- 手掌底部阴影 -->
+                <ellipse cx="16" cy="37" rx="10" ry="2.5" fill="rgba(0, 0, 0, 0.15)"/>
+
+                <!-- 手掌主体 - 胖乎乎的设计 -->
+                <g filter="url(#handshadow)">
+                    <!-- 手掌 -->
+                    <path d="M8 28C8 28 7 35 10 37C13 39 19 39 22 37C25 35 24 28 24 28L24 20C24 20 25 15 22 15C19 15 20 18 20 20L20 12C20 12 21 8 18 8C15 8 16 11 16 12L16 10C16 10 17 6 14 6C11 6 12 9 12 10L12 14C12 14 13 11 10 11C7 11 8 14 8 16L8 28Z"
+                          fill="#FFD4A3" stroke="#8B6F47" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                    <!-- 拇指 -->
+                    <path d="M8 20C8 20 6 20 5 22C4 24 4 26 6 27C8 28 10 27 10 25L10 22C10 22 9 20 8 20Z"
+                          fill="#FFD4A3" stroke="#8B6F47" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+                    <!-- 手指关节线条 -->
+                    <path d="M12 12C12 12 13 12 14 12" stroke="#D4A574" stroke-width="0.8" stroke-linecap="round"/>
+                    <path d="M16 10C16 10 17 10 18 10" stroke="#D4A574" stroke-width="0.8" stroke-linecap="round"/>
+                    <path d="M20 12C20 12 21 12 22 12" stroke="#D4A574" stroke-width="0.8" stroke-linecap="round"/>
+
+                    <!-- 高光效果 -->
+                    <ellipse cx="13" cy="24" rx="2.5" ry="3.5" fill="white" opacity="0.4"/>
+                    <ellipse cx="19" cy="24" rx="2.5" ry="3.5" fill="white" opacity="0.4"/>
+                </g>
+
+                <defs>
+                    <filter id="handshadow" x="-20%" y="-20%" width="140%" height="140%">
+                        <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"/>
+                        <feOffset dx="0" dy="1.5" result="offsetblur"/>
+                        <feComponentTransfer>
+                            <feFuncA type="linear" slope="0.25"/>
+                        </feComponentTransfer>
+                        <feMerge>
+                            <feMergeNode/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+            </svg>
+        `;
         cursor.style.cssText = `
             position: fixed;
-            font-size: 28px;
+            width: 32px;
+            height: 40px;
             pointer-events: none;
             z-index: 9999;
             transform: translate(-50%, -50%);
             transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             opacity: 1;
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
         `;
         document.body.appendChild(cursor);
 
